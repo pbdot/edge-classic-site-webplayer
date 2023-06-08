@@ -2557,7 +2557,9 @@ var player_EdgeClassic = function EdgeClassic() {
   var pointerLockChange = function pointerLockChange() {
     var canvas = canvasRef === null || canvasRef === void 0 ? void 0 : canvasRef.current;
     var lock = canvas === document.pointerLockElement;
-    Module._I_WebSetFullscreen(lock ? 1 : 0);
+
+    // disabled for embedded classic site
+    //Module._I_WebSetFullscreen(lock ? 1 : 0);
 
     /*
     // It feels good to open the menu when releasing pointer lock
