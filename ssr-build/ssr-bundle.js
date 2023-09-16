@@ -2602,9 +2602,9 @@ var player_WadChooser = function WadChooser() {
       var _ref, _ev$target, _ev$target$value, _ev$target2;
       var value = (_ref = ev !== null && ev !== void 0 && (_ev$target = ev.target) !== null && _ev$target !== void 0 && (_ev$target$value = _ev$target.value) !== null && _ev$target$value !== void 0 && _ev$target$value.length ? ev === null || ev === void 0 ? void 0 : (_ev$target2 = ev.target) === null || _ev$target2 === void 0 ? void 0 : _ev$target2.value : undefined) === null || _ref === void 0 ? void 0 : _ref.trim().replace("\n", " ");
       if (value !== null && value !== void 0 && value.length) {
-        document.cookie = "customCommandLineCookie=".concat(value);
+        document.cookie = "customCommandLineCookie=".concat(value, "; SameSite=None; Secure");
       } else {
-        document.cookie = "customCommandLineCookie=;";
+        document.cookie = "customCommandLineCookie=; SameSite=None; Secure";
       }
     }
   }, (_getCookie$trim = (_getCookie = getCookie("customCommandLineCookie")) === null || _getCookie === void 0 ? void 0 : _getCookie.trim()) !== null && _getCookie$trim !== void 0 ? _getCookie$trim : ""), Object(external_preact_["h"])("div", {
