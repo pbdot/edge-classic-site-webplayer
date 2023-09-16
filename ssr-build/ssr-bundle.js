@@ -2708,6 +2708,12 @@ var player_EdgeClassic = function EdgeClassic() {
     var iwad = wadState === null || wadState === void 0 ? void 0 : wadState.find(function (w) {
       return w.isIWAD;
     });
+    if (!iwad) {
+      iwad = {
+        wadName: defaultIWad,
+        isIWAD: true
+      };
+    }
     console.log("WadState", wadState);
 
     /*
